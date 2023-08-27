@@ -3,6 +3,11 @@ export type ProductInputType = {
   nameInput: HTMLInputElement;
 };
 
+export type Product = {
+  quantity: number;
+  name: string;
+};
+
 export const SetupProductInput = (): ProductInputType => {
   const nameInput = document.createElement("input");
   const quantityInput = document.createElement("input");

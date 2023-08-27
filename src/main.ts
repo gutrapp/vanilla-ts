@@ -1,6 +1,10 @@
 import "./style.css";
 import { DynamicInput } from "./components/DynamicInput";
-import { ProductInputType, SetupProductInput } from "./components/ProductInput";
+import {
+  Product,
+  ProductInputType,
+  SetupProductInput,
+} from "./components/ProductInput";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
@@ -12,7 +16,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   </div>
 `;
 
-const DynamicProductInput = new DynamicInput<ProductInputType>({
+const DynamicProductInput = new DynamicInput<ProductInputType, Product>({
   addButton: document.querySelector("#add")!,
   display: document.querySelector("#dynamic-input")!,
   createInput: SetupProductInput,
